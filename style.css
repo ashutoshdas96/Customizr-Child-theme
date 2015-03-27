@@ -1,0 +1,96 @@
+/*
+Theme Name:     Customizr Child
+Theme URI:      http://themesandco.com/customizr
+Description:    A child theme for the Customizr WordPress theme. This child theme simply includes 2 files : style.css to add your custom css and functions.php where you can extend Customizr's core code. In order to keep your code as clean and flexible as possible, try to use Customizr's hooks API for your customizations. Do something awesome and have fun !
+Author:         Nicolas Guillaume (nikeo)
+Author URI:     http://themesandco.com
+Template:       customizr
+Version:        1.0.0
+*/
+
+/* Your awesome customizations start right here !
+-------------------------------------------------------------- */
+/*Custom comment bubble*/
+
+.my-custom-bubble {
+ position: relative;
+ bottom: 28px;
+ right: 10px;
+ padding: 4px;
+ margin: 1em 0 3em;
+ border: 2px solid #F00;
+ background: #FFF;
+ -webkit-border-radius: 10px;
+ -moz-border-radius: 10px;
+ border-radius: 10px;
+ font-size: 10px;
+ color: #F00;
+}
+.my-custom-bubble:before {
+ content: "";
+ position: absolute;
+ bottom: -14px;
+ left: 10px;
+ border-width: 14px 8px 0;
+ border-style: solid;
+ border-color: #F00 rgba(0, 0, 0, 0);
+ display: block;
+ width: 0;
+}
+.my-custom-bubble:after {
+ content: "";
+ position: absolute;
+ bottom: -11px;
+ left: 11px;
+ border-width: 13px 7px 0;
+ border-style: solid;
+ border-color: #FFF rgba(0, 0, 0, 0);
+ display: block;
+ width: 0;
+}
+
+/*End of Custom comment bubble*/
+
+/*rounded Avatar*/
+
+.avatar {
+	border: solid 2px silver;
+	border-radius: 30%;	
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+}
+/*To achieve only rounded corners on square avatar image you need to change border-radius 					value to, let me say, 10% */
+/*End of rounded avatar*/
+
+/*Social icon*/
+a.icon-feed:hover       {color:#DC622C;}    /* Change to desired color */
+a.icon-twitter:hover    {color:#00B6F1;}    /* Change to desired color */
+a.icon-facebook:hover   {color:#3B5998;}    /* Change to desired color */
+a.icon-google:hover     {color:#C20806;}    /* Change to desired color */
+a.icon-instagram:hover  {color:#2C6A93;}    /* Change to desired color */
+a.icon-wordpress:hover  {color:#04769C;}    /* Change to desired color */
+a.icon-youtube:hover    {color:#C31A1E;}    /* Change to desired color */
+a.icon-pinterest:hover  {color:#C91517;}    /* Change to desired color */
+a.icon-github:hover     {color:#040204;}    /* Change to desired color */
+a.icon-dribbble:hover   {color:#333333;}    /* Change to desired color */
+a.icon-linkedin:hover   {color:#04669A;}    /* Change to desired color */
+
+footer#footer .colophon a.icon-feed       {color:#DC622C;}    /* Change to desired color */
+footer#footer .colophon a.icon-twitter    {color:#00B6F1;}    /* Change to desired color */
+footer#footer .colophon a.icon-facebook   {color:#3B5998;}    /* Change to desired color */
+footer#footer .colophon a.icon-google     {color:#C20806;}    /* Change to desired color */
+footer#footer .colophon a.icon-instagram  {color:#2C6A93;}    /* Change to desired color */
+footer#footer .colophon a.icon-wordpress  {color:#04769C;}    /* Change to desired color */
+footer#footer .colophon a.icon-youtube    {color:#C31A1E;}    /* Change to desired color */
+footer#footer .colophon a.icon-pinterest  {color:#C91517;}    /* Change to desired color */
+footer#footer .colophon a.icon-github     {color:#040204;}    /* Change to desired color */
+footer#footer .colophon a.icon-dribbble   {color:#333333;}    /* Change to desired color */
+footer#footer .colophon a.icon-linkedin   {color:#04669A;}    /* Change to desired color */
+/*Remember to add the Header (.navbar-inner ) and/or Footer (footer#footer .colophon ) prefix before the a.icon or it will default to the Header icons only.*/
+
+/* Remove the Tagline on Mobile  */
+@media (max-width: 978px) {
+    h2.site-description {
+        display:    none;
+    }
+}
